@@ -23,10 +23,10 @@
     "format": "yarn prettier -c --write .",
     "lint": "yon eslint --ignore-path .gitignore .",
     "test": "jest",
-    "prerelease": "yon lint && yon build",
+    "prerelease": "yarn lint && yarn build",
     "release": "npx np",
-    "prestart": "yon --cwd ./example install && yon --cwd ./example build",
-    "start": "yon --cwd ./example start"
+    "prestart": "yarn --cwd ./example install && yarn build && yarn --cwd ./example build",
+    "start": "yarn --cwd ./example start"
   },
   "dependencies": {
     "path-to-regexp": "^6.2.0",
