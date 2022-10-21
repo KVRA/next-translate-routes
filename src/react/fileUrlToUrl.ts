@@ -123,8 +123,8 @@ export const fileUrlToUrl = (url: UrlObject | URL | string, locale: string) => {
         delete newQuery[patterToken.name]
       }
     }
-
-    return `${locale !== defaultLocale ? `/${locale}` : ''}${formatUrl({
+    const hasLocalePrefix = locale !== defaultLocale && process.env.NEXT_PUBLIC_HAS_LOCALE_PREFIX !== 'false'
+    return `${hasLocalePrefix ? `/${locale}` : ''}${formatUrl({
       pathname: newPathname,
       query: newQuery,
       hash,

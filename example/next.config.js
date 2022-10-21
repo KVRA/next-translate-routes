@@ -3,8 +3,22 @@ const withTranslateRoutes = require('next-translate-routes/plugin')
 
 const nextConfig = withTranslateRoutes({
   i18n: {
-    locales: ['en', 'fr'],
+    locales: ['en', 'fr','de'],
     defaultLocale: 'en',
+    domains: [
+      {
+        domain: 'dev2.gindumac.com',
+        defaultLocale: 'en',
+      },
+      {
+        domain: 'dev2.gindumac.fr',
+        defaultLocale: 'fr',
+      },
+      {
+        domain: 'dev2.gindumac.de',
+        defaultLocale: 'de',
+      },
+    ]
   },
 
   translateRoutes: {
