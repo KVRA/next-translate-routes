@@ -76,7 +76,7 @@ export const withTranslateRoutes = (userNextConfig: NextConfigWithNTR): NextConf
           `${pagesPath.replace(/\\|\//g, '(\\\\|\\/)')}_app\\.(${context.config.pageExtensions.join('|')})$`,
         ),
         use: {
-          loader: 'next-translate-routes/loader',
+          loader: 'next-translate-routes-multi-domain/loader',
           options: {
             data: ntrData,
           },
